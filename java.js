@@ -25,3 +25,4 @@ function generateprofile() {
       {
       alert("De tekst is te lang")
       }
+}
