@@ -12,6 +12,12 @@ h1 {
   color: #FFF;
 }
 
+h2 {
+  color: #FFF;
+  font-size: 20px;
+  text-align: center;
+}
+
 form {
     width: 80%;
     margin: 0 auto;
@@ -34,4 +40,27 @@ label + input {
 
 input + input {
     float: right;
+}
+
+
+div.container {
+  color: #FFFFFF;
+  font-size: 18px;
+  width: 75%;
+  border: 2px white;
+}
+
+div.box {
+  color: #FFFFFF;
+  font-size: 18px;
+  box-sizing: border-box;
+  margin: 5px;
+  padding: 5px;
+  width: 75%;
+  border: 2px solid white;
+  float: left;
+}
+
+.test {
+  cursor:url(cg.png), auto;
 }

@@ -26,3 +26,8 @@ function generateprofile() {
       alert("De tekst is te lang")
       }
     }
+    function formReset() {
+        document.getElementById("frm1").reset();
+    }
+
+    

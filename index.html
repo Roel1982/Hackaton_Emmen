@@ -4,10 +4,43 @@
     <meta charset="utf-8">
     <title>Hackaton Emmen Opdracht</title>
     <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="fallingtextrotator.css" />
+
+<link href='http://fonts.googleapis.com/css?family=Orbitron:400,700,900' rel='stylesheet' type='text/css'>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+<script src="jquery.lettering-0.6.1.min.js"></script>
+
+<script src="fallingtextrotator.js">
+
+</script>
+
+<script>
+
+
+jQuery(function(){ // on DOM load
+
+	$('#headline').fallingtextrotator({
+		pause: 3000,
+		cycles: 2,
+		ontextchange:function(msgindex, msg, eachchar){
+			//console.log(msgindex, msg, eachchar)
+		}
+	})
+})
+
+</script>
   </head>
+
   <body>
-<h1><center>Hackaton opdracht - Emmen - Team 1 </center></h1><br><br>
-<form onsubmit="generateprofile(); return false;">
+    <div class="test">
+<h1><center>Job application content generator</center></h1><br>
+<ul id="headline" class="fallingtextrotator" style="height:2em">
+<li>Version 1.3</li>
+<li>Brought to you by TeaM 1!</li>
+</ul>
+<form id="frm1" onsubmit="generateprofile(); return false;">
       <label>Naam: <input type="text" id="naam"></input><br />
       Leeftijd: <input type="number" id="leeftijd"></input><br />
       Woonplaats: <input type="text" id="woonplaats"></input><br /><br />
@@ -18,9 +51,9 @@
       Hoogst genoten opleiding: <input type="text" id="opleiding"></input><br />
       Aantal uren per week beschikbaar: <input type="number" id="uren"></input><br /><br />
 
-      Welke vervoersmiddelen heb jij tot je beschikking: <input type="text" id="vervoer1"></input> <br />
-                                                         <input type="text" id="vervoer2"></input> <br />
-                                                         <input type="text" id="vervoer3"></input> <br /><br />
+      Welke vervoersmiddelen heb jij tot je beschikking: <input type="text" id="vervoer1"></input><br />
+                                                         <input type="text" id="vervoer2"></input><br />
+                                                         <input type="text" id="vervoer3"></input><br />
 
       3 Kernwoorden die jou beschrijven:  <input type="text"  id="kernwoord1"></input><br />
                                           <input type="text" id="kernwoord2"></input><br />
@@ -31,17 +64,26 @@
 
       Vrije invoer: <textarea id="vrijeinvoer" cols=75 rows=3></textarea><br />
 
-      <input type="submit" value="Verstuur"></label>
+      <input type="submit" value="Verstuur">
+      <input type="button" onclick="formReset()" value="Reset"></label>
    </form><br><br>
 
 
-
-<p>Goededag, mijn naam is <b id= "nieuwenaam">Piet</b>, ik ben <b id= "nieuweleeftijd">10</b> en woonachtig in <b id= "nieuwewoonplaats">Amsterdam</b> en momenteel ben ik werkzoekende. Ik ben op zoek naar een baan als <b id= "nieuwebaan1">baan 1</b> of als <b id= "nieuwebaan2">baan 2</b>. Mijn hoogst genoten opleiding is <b id= "nieuweopleiding">Opleiding</b>. Ik ben gemotiveerd om snel te beginnen en ben voor <b id= "nieuweuren">20</b> uren per week beschikbaar. Ik beschik over de volgende vervoersmiddelen <b id = "nieuwvervoer1">A</b>, <b id = "nieuwvervoer2">B</b>, <b id = "nieuwvervoer3">C</b>.
+  <div class="box">
+<p>Goededag, mijn naam is <b id= "nieuwenaam">Piet</b>, ik ben <b id= "nieuweleeftijd">10</b> en woonachtig in <b id= "nieuwewoonplaats">Amsterdam</b> en momenteel ben ik werkzoekende.<br/>
+Ik ben op zoek naar een baan als <b id= "nieuwebaan1">baan 1</b> of als <b id= "nieuwebaan2">baan 2</b>.<br/> Mijn hoogst genoten opleiding is <b id= "nieuweopleiding">Opleiding</b>.<br/>Ik ben gemotiveerd om snel te beginnen en ben voor <b id= "nieuweuren">20</b> uren per week beschikbaar.<br/>
+Ik beschik over de volgende vervoersmiddelen <b id = "nieuwvervoer1">A</b>, <b id = "nieuwvervoer2">B</b>, <b id = "nieuwvervoer3">C</b>.<br/>
 De volgende kernwoorden beschrijven mij: <b id= "nieuwkernwoord1">A</b>, <b id= "nieuwkernwoord2">B</b>, <b id= "nieuwkernwoord3">C</b>,
 Mocht u contact met mij willen opnemen dan kunt u mij bereiken via <b id= "nieuwtelefoon"> 06 - 1234 5679</b> of <b id= "nieuwemail"> info@naam.nl</b>
+ <div/>
 <br><br>
-Vrije Invoer: <i id="nieuwvrijeinvoer">Nog geen vrije invoer ingegeven..</i></p>
 
+Vrije Invoer:
+<div class="container">
+  <div class="box"><i id="nieuwvrijeinvoer">Nog geen vrije invoer ingegeven..</i></div>
+</div>
+           </p>
+         </div>
 <script src="java.js"></script>
 
   </body>
